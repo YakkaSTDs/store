@@ -1,0 +1,229 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap');
+
+:root {
+  --yk-primary: #4d8b31;
+  --yk-primary-rgb: 77,139,49;
+  --yk-auxilary: #ff8427;
+  --yk-auxilary-rgb: 255,132,39;
+  --yk-dark: #1e1e1e;
+  --yk-dark-rgb: 30,30,30;
+  --yk-light: #e1e1e1;
+  --yk-light-rgb: 225,225,225;
+  --yk-secondary: #2e2e2e;
+  --yk-secondary-rgb: 46,46,46;
+  --yk-muted: #c1c1c1;
+  --yk-muted-rgb: 193,193,193;
+
+  --yk-header: "Montserrat", Display;
+  --yk-body: "Inter", sans-serif;
+
+  --yk-border: 1px;
+  --yk-rounding: 0.5rem;
+}
+
+/* Typography Defaults */
+body {
+  font-family: var(--yk-body);
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--yk-header);
+  font-weight: bold;
+}
+
+/* Responsive Media */
+img, svg {
+  max-width: 100%;
+  height: auto;
+  image-rendering: optimizeSpeed;       /* Older versions of Firefox */
+  image-rendering: -moz-crisp-edges;    /* Firefox */
+  image-rendering: -o-crisp-edges;      /* Opera */
+  image-rendering: -webkit-optimize-contrast; /* Safari */
+  image-rendering: crisp-edges;
+  image-rendering: pixelated;
+  -ms-interpolation-mode: nearest-neighbor; /* IE (non-standard) */
+}
+
+/* Text Colors */
+.yktx-primary { color: var(--yk-primary); }
+.yktx-auxilary { color: var(--yk-auxilary); }
+.yktx-dark { color: var(--yk-dark); }
+.yktx-light { color: var(--yk-light); }
+.yktx-secondary { color: var(--yk-secondary); }
+.yktx-muted { color: var(--yk-muted); }
+
+/* Backgrounds */
+.ykbg-primary { background-color: var(--yk-primary); }
+.ykbg-auxilary { background-color: var(--yk-auxilary); }
+.ykbg-dark { background-color: var(--yk-dark); }
+.ykbg-light { background-color: var(--yk-light); }
+.ykbg-secondary { background-color: var(--yk-secondary); }
+.ykbg-muted { background-color: var(--yk-muted); }
+
+/* Borders */
+.ykbr-primary { border: var(--yk-border) solid var(--yk-primary); border-radius: var(--yk-rounding); }
+.ykbr-auxilary { border: var(--yk-border) solid var(--yk-auxilary); border-radius: var(--yk-rounding); }
+.ykbr-dark { border: var(--yk-border) solid var(--yk-dark); border-radius: var(--yk-rounding); }
+.ykbr-light { border: var(--yk-border) solid var(--yk-light); border-radius: var(--yk-rounding); }
+.ykbr-secondary { border: var(--yk-border) solid var(--yk-secondary); border-radius: var(--yk-rounding); }
+.ykbr-muted { border: var(--yk-border) solid var(--yk-muted); border-radius: var(--yk-rounding); }
+
+/* === Button Base Shared === */
+.ykbt-primary,
+.ykbt-auxilary,
+.ykbt-light,
+.ykbt-dark,
+.ykbt-primary-out,
+.ykbt-auxilary-out,
+.ykbt-light-out,
+.ykbt-dark-out {
+  font-family: var(--yk-body);
+  font-weight: 600;
+  border-radius: var(--yk-rounding);
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+/* === Solid Buttons === */
+.ykbt-primary {
+  background-color: var(--yk-primary);
+  color: white;
+  border: none;
+}
+.ykbt-primary:hover,
+.ykbt-primary:focus {
+  background-color: rgba(var(--yk-primary-rgb), 0.85);
+}
+.ykbt-primary:active {
+  background-color: rgba(var(--yk-primary-rgb), 0.7);
+  transform: scale(0.95);
+}
+
+.ykbt-auxilary {
+  background-color: var(--yk-auxilary);
+  color: black;
+  border: none;
+}
+.ykbt-auxilary:hover,
+.ykbt-auxilary:focus {
+  background-color: rgba(var(--yk-auxilary-rgb), 0.85);
+}
+.ykbt-auxilary:active {
+  background-color: rgba(var(--yk-auxilary-rgb), 0.7);
+  transform: scale(0.95);
+}
+
+.ykbt-light {
+  background-color: var(--yk-light);
+  color: black;
+  border: none;
+}
+.ykbt-light:hover,
+.ykbt-light:focus {
+  background-color: rgba(var(--yk-light-rgb), 0.85);
+}
+.ykbt-light:active {
+  background-color: rgba(var(--yk-light-rgb), 0.7);
+  transform: scale(0.95);
+}
+
+.ykbt-dark {
+  background-color: var(--yk-dark);
+  color: white;
+  border: none;
+}
+.ykbt-dark:hover,
+.ykbt-dark:focus {
+  background-color: rgba(var(--yk-dark-rgb), 0.85);
+}
+.ykbt-dark:active {
+  background-color: rgba(var(--yk-dark-rgb), 0.7);
+  transform: scale(0.95);
+}
+
+/* === Outline Buttons === */
+.ykbt-primary-out {
+  background-color: transparent;
+  color: var(--yk-primary);
+  border: var(--yk-border) solid var(--yk-primary);
+}
+.ykbt-primary-out:hover,
+.ykbt-primary-out:focus {
+  background-color: var(--yk-primary);
+  color: white;
+}
+.ykbt-primary-out:active {
+  background-color: rgba(var(--yk-primary-rgb), 0.85);
+  transform: scale(0.95);
+}
+
+.ykbt-auxilary-out {
+  background-color: transparent;
+  color: var(--yk-auxilary);
+  border: var(--yk-border) solid var(--yk-auxilary);
+}
+.ykbt-auxilary-out:hover,
+.ykbt-auxilary-out:focus {
+  background-color: var(--yk-auxilary);
+  color: black;
+}
+.ykbt-auxilary-out:active {
+  background-color: rgba(var(--yk-auxilary-rgb), 0.85);
+  transform: scale(0.95);
+}
+
+.ykbt-light-out {
+  background-color: transparent;
+  color: var(--yk-light);
+  border: var(--yk-border) solid var(--yk-light);
+}
+.ykbt-light-out:hover,
+.ykbt-light-out:focus {
+  background-color: var(--yk-light);
+  color: black;
+}
+.ykbt-light-out:active {
+  background-color: rgba(var(--yk-light-rgb), 0.85);
+  transform: scale(0.95);
+}
+
+.ykbt-dark-out {
+  background-color: transparent;
+  color: var(--yk-dark);
+  border: var(--yk-border) solid var(--yk-dark);
+}
+.ykbt-dark-out:hover,
+.ykbt-dark-out:focus {
+  background-color: var(--yk-dark);
+  color: white;
+}
+.ykbt-dark-out:active {
+  background-color: rgba(var(--yk-dark-rgb), 0.85);
+  transform: scale(0.95);
+}
+
+/* Heights */
+.ykst-100vh {
+  min-height: 100dvh;
+}
+.ykst-50vh {
+  min-height: 50dvh;
+}
+.ykst-justify {
+  text-align: justify;
+}
+.ykst-h100 {
+  min-height: 100%;
+}
+
+/* Specialized */
+.ykbg-jumbo {
+  background-image: linear-gradient(to bottom, transparent,rgba(var(--yk-dark-rgb),0.75),var(--yk-dark)),url('IMG/bg.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
